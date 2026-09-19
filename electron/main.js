@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
-const { autoUpdater } = require('electron-updater'); // ⬅️ NOVO
+const { autoUpdater } = require('electron-updater');
 const path = require('path');
 const { spawn, execSync } = require('child_process');
 const fs = require('fs');
@@ -82,14 +82,6 @@ function configurarUpdater() {
   if (!app.isPackaged) {
     console.log('[UPDATER] Modo dev detectado, updater desabilitado.');
     return;
-  }
-
-  const token = lerEnvVar('GH_TOKEN') || process.env.GH_TOKEN;
-  if (token) {
-    autoUpdater.addAuthHeader(`Bearer ${token}`);
-    console.log('[UPDATER] Token do GitHub configurado.');
-  } else {
-    console.warn('[UPDATER] Sem GH_TOKEN — repo privado vai falhar.');
   }
 
   autoUpdater.autoDownload = true;
@@ -389,7 +381,7 @@ function iniciarMotor(nome, comando, args, event) {
       LBS_ENV_PATH: ENV_PATH,
       LBS_CONFIG_PATH: configPath,
       PYTHONUNBUFFERED: '1',
-      AI_API_KEY: lerEnvVar('AI_API_KEY'), // ⬅️ NOVO
+      AI_API_KEY: lerEnvVar('AI_API_KEY'),
     }
   });
 
