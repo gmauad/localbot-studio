@@ -374,7 +374,14 @@ app.whenReady().then(() => {
 function iniciarMotor(nome, comando, args, event) {
   event.sender.send('engine-status', nome, 'loading');
 
-  const processo = spawn(comando, args, {
+  let comandoFinal = comando;
+  if (comando === 'python') {
+    comandoFinal = isDev
+      ? 'python'
+      : path.join(RESOURCES_PATH, 'backend', 'python', 'python.exe');
+  }
+
+  const processo = spawn(comandoFinal, args, {
     cwd: BACKEND_PATH,
     env: {
       ...process.env,

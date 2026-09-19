@@ -79,6 +79,7 @@
         "filter": [
           "**/*",
           "!bin/**",
+          "!python/**",
           "!**/__pycache__/**",
           "!**/*.sqlite",
           "!**/*.sqlite-wal",
@@ -87,6 +88,16 @@
           "!**/*.mp3",
           "!**/audio_*",
           "!**/*.gguf"
+        ]
+      },
+      {
+        "from": "backend/python",
+        "to": "backend/python",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**",
+          "!**/*.pyc",
+          "!get-pip.py"
         ]
       },
       {
