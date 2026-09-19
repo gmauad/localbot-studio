@@ -1,7 +1,6 @@
 {
   "name": "localbot-studio",
   "private": true,
-  "releaseType": "release",
   "version": "0.9.4",
   "main": "electron/main.js",
   "description": "Criador de Bot de Discord com IA local.",
@@ -64,7 +63,8 @@
         "provider": "github",
         "owner": "gmauad",
         "repo": "localbot-studio",
-        "private": true
+        "private": true,
+        "releaseType": "release"
       }
     ],
     "files": [
