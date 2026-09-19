@@ -86,7 +86,7 @@ function configurarUpdater() {
 
   const token = lerEnvVar('GH_TOKEN') || process.env.GH_TOKEN;
   if (token) {
-    autoUpdater.addAuthHeader(`token ${token}`);
+    autoUpdater.addAuthHeader(`Bearer ${token}`);
     console.log('[UPDATER] Token do GitHub configurado.');
   } else {
     console.warn('[UPDATER] Sem GH_TOKEN — repo privado vai falhar.');

@@ -1,7 +1,8 @@
 {
   "name": "localbot-studio",
   "private": true,
-  "version": "0.9.3",
+  "releaseType": "release",
+  "version": "0.9.4",
   "main": "electron/main.js",
   "description": "Criador de Bot de Discord com IA local.",
   "author": "gmauad",
@@ -13,7 +14,8 @@
     "preview": "vite preview",
     "build:win": "vite build && electron-builder --win",
     "build:portable": "vite build && electron-builder --win portable",
-    "release": "vite build && electron-builder --win --publish always"
+    "release": "vite build && dotenv -e .env -- electron-builder --win --publish always",
+    "release:portable": "vite build && dotenv -e .env -- electron-builder --win portable --publish always"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -23,6 +25,7 @@
     "autoprefixer": "^10.6.0",
     "concurrently": "^10.0.5",
     "cross-env": "^10.1.0",
+    "dotenv-cli": "^11.0.0",
     "electron": "^44.3.0",
     "electron-builder": "^26.15.3",
     "oxlint": "^1.81.0",

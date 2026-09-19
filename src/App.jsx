@@ -1042,7 +1042,7 @@ function App() {
             </div>
             <div>
               <h1 className="font-semibold text-zinc-100 text-sm leading-tight">LocalBot Studio</h1>
-              <p className="text-zinc-500 text-[11px] font-medium tracking-wide">VERSION {appVersion || '0.9.2'}</p>
+              <p className="text-zinc-500 text-[11px] font-medium tracking-wide">VERSION {appVersion || '0.9.4'}</p>
             </div>
           </div>
           <div className="p-3 flex flex-col gap-0.5">
