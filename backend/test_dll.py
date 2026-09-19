@@ -12,7 +12,6 @@ os.add_dll_directory(cuda_dir)
 print(f"lib: {lib_dir}")
 print(f"cuda: {cuda_dir}")
 
-# Ordem correta: do mais básico pro mais complexo
 dlls = [
     ("ggml-base.dll", lib_dir),
     ("ggml-cpu.dll", lib_dir),
