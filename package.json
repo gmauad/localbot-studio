@@ -12,7 +12,7 @@
     "preview": "vite preview",
     "build:win": "vite build && electron-builder --win",
     "build:portable": "vite build && electron-builder --win portable",
-    "release": "vite build && dotenv -e .env -- electron-builder --win --publish always",
+    "release": "vite build && electron-builder --win --publish never",
     "release:portable": "vite build && dotenv -e .env -- electron-builder --win portable --publish always"
   },
   "devDependencies": {
