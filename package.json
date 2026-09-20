@@ -1,6 +1,6 @@
 {
   "name": "localbot-studio",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "main": "electron/main.js",
   "description": "Criador de Bot de Discord com IA local.",
   "author": "gmauad",
